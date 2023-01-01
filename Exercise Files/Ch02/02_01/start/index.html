@@ -37,6 +37,10 @@
         return (
           <section>
             <h4>{props.message}</h4>
+            <img 
+              height={200}
+              src={props.img.src}
+              alt={props.img.alt}/>  
             <ul>
               {concepts.map(concept => (<li key={concept.id}>{concept.title}</li>))}
             </ul>
@@ -56,6 +60,12 @@
             <Header title="Getting Started with React"/>
             <Main 
             message="We are going to learn the basics today!" 
+            img={
+              {
+                src:"https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                alt:"image of books in a library"
+              }
+            }
             concepts="{concepts}"
             />
             <Footer year={new Date().getFullYear()}/>
