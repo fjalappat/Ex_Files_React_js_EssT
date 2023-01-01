@@ -28,13 +28,17 @@
         </header>
         );
       }
-      const concepts = ["React DOM", "JSX", "Babel"];
+      const concepts = [
+        { id: 1, title: "React DOM" },
+        { id: 2, title: "JSX" },
+        { id: 3, title: "Babel" }
+    ];
       function Main(props) {
         return (
           <section>
             <h4>{props.message}</h4>
             <ul>
-              {concepts.map(concept => (<li>{concept}</li>))}
+              {concepts.map(concept => (<li key={concept.id}>{concept.title}</li>))}
             </ul>
           </section>
         );
