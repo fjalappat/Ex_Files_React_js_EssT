@@ -56,7 +56,7 @@
       }
       function App() {
         return (
-          <div>
+          <React.Fragment>
             <Header title="Getting Started with React"/>
             <Main 
             message="We are going to learn the basics today!" 
@@ -69,7 +69,7 @@
             concepts="{concepts}"
             />
             <Footer year={new Date().getFullYear()}/>
-          </div>
+          </React.Fragment>
         );
       }
       ReactDOM.render(
