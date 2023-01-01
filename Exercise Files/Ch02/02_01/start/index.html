@@ -20,23 +20,24 @@
   <body>
     <div id="root"></div>
     <script type = "text/babel">
-      function Header() {
+      function Header(props) {
+        console.log(props);
         return (
         <header>
-          <h1>Getting Started on React</h1>
+          <h1>{props.title}</h1>
         </header>
         );
       }
-      function Main() {
+      function Main(props) {
         return (
-          <section> We are learning the basics today</section>
+          <section>{props.message}</section>
         );
       }
       function App() {
         return (
           <div>
-            <Header/>
-            <Main/>
+            <Header title="Getting Started with React"/>
+            <Main message=" We are learing the basics today"/>
           </div>
         );
       }
