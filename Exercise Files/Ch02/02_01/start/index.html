@@ -28,16 +28,33 @@
         </header>
         );
       }
+      const concepts = ["React DOM", "JSX", "Babel"];
       function Main(props) {
         return (
-          <section>{props.message}</section>
+          <section>
+            <h4>{props.message}</h4>
+            <ul>
+              {concepts.map(concept => (<li>{concept}</li>))}
+            </ul>
+          </section>
+        );
+      }
+      function Footer(props) {
+        return (
+          <footer>
+            <p>Copyright @{props.year}</p>
+          </footer>
         );
       }
       function App() {
         return (
           <div>
             <Header title="Getting Started with React"/>
-            <Main message=" We are learing the basics today"/>
+            <Main 
+            message="We are going to learn the basics today!" 
+            concepts="{concepts}"
+            />
+            <Footer year={new Date().getFullYear()}/>
           </div>
         );
       }
